@@ -6,7 +6,7 @@ const api = apiAdapter(URL_SERVICE_COURSE);
 module.exports = async (req, res) => {
     try {
         const id = req.params.id;
-        const mentor = await api.delete(`/api/mentors/${id}`, req.body);
+        const mentor = await api.delete(`/api/mentors/${id}`);
         
         return res.json(mentor.data);
     } catch (error) {
